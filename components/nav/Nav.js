@@ -16,10 +16,8 @@ const Nav = withNavigationContext(({ fullpage }) => {
 
           <div>
             <h1>
-              <span>REACT</span>
-              <span>AWESOME SLIDER</span>
+              <span>ALESSANDRO DI PUCCIO</span>
             </h1>
-            <h2>FULL-PAGE TRANSITION STRATEGY</h2>
           </div>
         </div>
         <nav>

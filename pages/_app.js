@@ -1,7 +1,6 @@
 import React from 'react';
 import App, { Container }  from 'next/app';
 import { AnimatePresence } from 'framer-motion';
-import Layout from "../layout/Layout";
 
 class MyApp extends App {
   render() {

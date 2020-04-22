@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { Provider } from "react-awesome-slider/dist/navigation";
 import Nav from '../components/nav/Nav';
 import { motion } from 'framer-motion';
-
+import Video from '../components/home/Video';
 
 import React from 'react'
 import Gallery from '../components/Gallery';
@@ -14,7 +14,7 @@ const Index = () => {
   return (
     <>
       <Nav />
-      <Gallery />
+      <Video />
     </>
   )
 }
