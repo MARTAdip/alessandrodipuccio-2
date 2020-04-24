@@ -1,49 +1,50 @@
-import * as React from "react";
-import Link from "next/link";
+import * as React from 'react';
+import Link from 'next/link';
 
-import { motion } from "framer-motion";
-import { images } from "../constants";
+import { motion } from 'framer-motion';
+import { images } from '../constants';
 
 const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const thumbnailVariants = {
-    initial: { scale: 0.9, opacity: 0 },
-    enter: { scale: 1, opacity: 1, transition },
-    exit: {
-        scale: 0.5,
-        opacity: 0,
-        transition: { duration: 1.5, ...transition }
-    }
+  initial: { scale: 0.9, opacity: 0 },
+  enter: { scale: 1, opacity: 1, transition },
+  exit: {
+    scale: 0.5,
+    opacity: 0,
+    transition: { duration: 1.5, ...transition },
+  },
 };
 
 const frameVariants = {
-    hover: { scale: 0.95 }
+  hover: { scale: 0.95 },
 };
 
 const imageVariants = {
-    hover: { scale: 1.1 }
+  hover: { scale: 1.1 },
 };
 
 const Thumbnail = ({ id, i }) => (
-    <>
-        <motion.div className="thumbnail" variants={thumbnailVariants}>
-            <motion.div
-                className="frame"
-                whileHover="hover"
-                variants={frameVariants}
-                transition={transition}
-            >
-                <Link href="/image/[id]" as={`/image/${i}`} scroll={false}>
-                    <motion.img
-                        src={`https://static1.squarespace.com/static/5b475b2c50a54f54f9b4e1dc/t/${id}.jpg?format=1500w`}
-                        alt="The Barbican"
-                        variants={imageVariants}
-                        transition={transition}
-                    />
-                </Link>
-            </motion.div>
-        </motion.div>
-        <style>{`
+  <>
+    <motion.div className="thumbnail" variants={thumbnailVariants}>
+      <motion.div className="frame" whileHover="hover" variants={frameVariants} transition={transition}>
+        <Link href="/image/[id]" as={`/image/${i}`} scroll={false}>
+          <motion.img
+            src="https://scontent.ftxl3-1.fna.fbcdn.net/v/t1.0-9/67294685_906178883065706_1192267382177923072_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=pmoEzbm-vCoAX_JY1sm&_nc_ht=scontent.ftxl3-1.fna&oh=c75719257daee6d4acb2cdc140406c5f&oe=5EC6EF55"
+            alt="hello"
+            variants={imageVariants}
+            transition={transition}
+          />
+          {/* <motion.img
+            src={`https://static1.squarespace.com/static/5b475b2c50a54f54f9b4e1dc/t/${id}.jpg?format=1500w`}
+            alt="The Barbican"
+            variants={imageVariants}
+            transition={transition}
+          /> */}
+        </Link>
+      </motion.div>
+    </motion.div>
+    <style>{`
             .thumbnail {
                 flex: 1 0 33%;
                 margin: 10px;
@@ -62,27 +63,27 @@ const Thumbnail = ({ id, i }) => (
                 height: 100%;
             }
         `}</style>
-    </>
+  </>
 );
 
 const Gallery = () => (
-    <>
-        <h1>Barbican</h1>
-        <div className="gallery">
-            <motion.div
-                className="thumbnails"
-                initial="initial"
-                animate="enter"
-                exit="exit"
-                variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
-            >
-                {images.map((id, i) => (
-                    <Thumbnail key={id} id={id} i={i} />
-                ))}
-            </motion.div>
-        </div>
-        <style>{`
-        h1 {
+  <>
+    <h2>Barbican</h2>
+    <div className="gallery">
+      <motion.div
+        className="thumbnails"
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
+      >
+        {images.map((id, i) => (
+          <Thumbnail key={id} id={id} i={i} />
+        ))}
+      </motion.div>
+    </div>
+    <style>{`
+        h2 {
             font-size: 100px;
             text-align: center;
             position: fixed;
@@ -117,26 +118,26 @@ const Gallery = () => (
          }
          
          @media screen and (min-width: 800px) {
-           h1 {
+           h2 {
              font-size: 180px;
              bottom: -170px;
            }
          }
          
          @media screen and (min-width: 1000px) {
-           h1 {
+           h2 {
              font-size: 220px;
              bottom: -200px;
            }
          }
          @media screen and (min-width: 1200px) {
-           h1 {
+           h2 {
              font-size: 280px;
              bottom: -260px;
            }
          }
         `}</style>
-    </>
+  </>
 );
 
 export default Gallery;

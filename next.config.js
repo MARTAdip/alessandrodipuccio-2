@@ -1,34 +1,28 @@
 const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
-const withImages = require('next-images')
+const withImages = require('next-images');
+const withFonts = require('next-fonts');
 
-module.exports = withCSS(withSass(), withImages({
-  devIndicators: {
-    autoPrerender: false,
-  },
-}));
-
-
-
-// const withCSS = require("@zeit/next-css");
-// require('dotenv').config()
-// const path = require('path')
-// const Dotenv = require('dotenv-webpack')
-
-
-// module.exports = withCSS(withImages({
-//     inlineImageLimit: 16384,
-//     webpack(config, options) {
-//         config.plugins = config.plugins || [];
-//         config.plugins = [
-//             ...config.plugins,
-
-//             // Read the .env file
-//             new Dotenv({
-//                 path: path.join(__dirname, '.env'),
-//                 systemvars: true
-//             })
-//         ];
-//         return config
-//     }
-// }));
+module.exports = withFonts(
+  withCSS(
+    withSass(
+      withImages({
+        enableSvg: true,
+        inlineImageLimit: 16384,
+        webpack(config, options) {
+          config.module.rules.push({
+            test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|jpe?g|)$/gi,
+            use: {
+              loader: 'url-loader',
+              options: {
+                limit: 100000,
+                name: '[name].[ext]',
+              },
+            },
+          });
+          return config;
+        },
+      })
+    )
+  )
+);
