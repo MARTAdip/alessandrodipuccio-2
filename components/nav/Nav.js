@@ -35,6 +35,9 @@ const Nav = withNavigationContext(({ fullpage }) => {
           <Link href="/music-links">
             <a>music</a>
           </Link>
+          <Link href="/teaching">
+            <a>teaching</a>
+          </Link>
           {/* <button type="button" className="navigation-toggle-mobile-menu">
             <span className="burger">
               <span className="burger__line"></span>

@@ -2,6 +2,7 @@ const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
 const withImages = require('next-images');
 const withFonts = require('next-fonts');
+const path = require('path');
 
 module.exports = withFonts(
   withCSS(
@@ -9,6 +10,7 @@ module.exports = withFonts(
       withImages({
         enableSvg: true,
         inlineImageLimit: 16384,
+        esModule: true,
         webpack(config, options) {
           config.module.rules.push({
             test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|jpe?g|)$/gi,

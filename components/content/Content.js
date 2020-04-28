@@ -44,7 +44,7 @@ const Content = withNavigationContext(({ fullpage, main, action }) => (
       </div>
       <div className="content__action__go">{action}</div>
       <div className="content__action__github">
-        <a target="_blank" href="https://github.com/rcaferati/react-awesome-slider">
+        <a target="blank" href="https://github.com/rcaferati/react-awesome-slider">
           <svg viewBox="0 0 16 16" version="1.1" aria-hidden="true">
             <path
               fillRule="evenodd"

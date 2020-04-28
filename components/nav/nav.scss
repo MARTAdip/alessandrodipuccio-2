@@ -33,7 +33,8 @@
 nav {
   a {
     color: black !important;
-    // cursor: url("public/music-15.svg"), auto;
+    cursor: url("https://img.icons8.com/metro/26/000000/musical-notes.png"),
+      auto;
   }
 }
 .page-header__wrapper {
@@ -55,6 +56,8 @@ nav {
     > a {
       width: 50px;
       color: black;
+      cursor: url("https://img.icons8.com/metro/26/000000/musical-notes.png"),
+        auto;
     }
   }
 

@@ -68,7 +68,7 @@ const Thumbnail = ({ id, i }) => (
 
 const Gallery = () => (
   <>
-    <h2>Barbican</h2>
+    {/* <h2>Barbican</h2> */}
     <div className="gallery">
       <motion.div
         className="thumbnails"
