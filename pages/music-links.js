@@ -4,7 +4,7 @@ import 'react-awesome-slider/dist/styles.css';
 
 import Nav from '../components/nav/Nav';
 
-export default function MusicLinks({}) {
+export default function MusicLinks() {
   return (
     <>
       <Nav />
@@ -69,7 +69,6 @@ export default function MusicLinks({}) {
             justify-content: center;
             flex-direction: row;
             margin-top: 3rem;
-            width: 80%;
           }
           @media (min-width: 1440px) {
             .grid {

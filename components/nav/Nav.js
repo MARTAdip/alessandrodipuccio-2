@@ -32,8 +32,8 @@ const Nav = withNavigationContext(({ fullpage }) => {
           <Link href="/about">
             <a>about</a>
           </Link>
-          <Link href="/music-links">
-            <a>music</a>
+          <Link href="/music-video">
+            <a>music & video</a>
           </Link>
           <Link href="/teaching">
             <a>teaching</a>

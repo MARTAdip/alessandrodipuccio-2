@@ -1,0 +1,24 @@
+.choice-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-flow: row;
+
+  .col-music {
+    background-color: darkslateblue;
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+  }
+  .inner {
+    align-self: center;
+  }
+  .col-video {
+    background-color: indianred;
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+  }
+}

@@ -29,12 +29,7 @@ const Thumbnail = ({ id, i }) => (
     <motion.div className="thumbnail" variants={thumbnailVariants}>
       <motion.div className="frame" whileHover="hover" variants={frameVariants} transition={transition}>
         <Link href="/image/[id]" as={`/image/${i}`} scroll={false}>
-          <motion.img
-            src="https://scontent.ftxl3-1.fna.fbcdn.net/v/t1.0-9/67294685_906178883065706_1192267382177923072_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=pmoEzbm-vCoAX_JY1sm&_nc_ht=scontent.ftxl3-1.fna&oh=c75719257daee6d4acb2cdc140406c5f&oe=5EC6EF55"
-            alt="hello"
-            variants={imageVariants}
-            transition={transition}
-          />
+          <motion.img src="../static/1.jpg" alt="hello" variants={imageVariants} transition={transition} />
           {/* <motion.img
             src={`https://static1.squarespace.com/static/5b475b2c50a54f54f9b4e1dc/t/${id}.jpg?format=1500w`}
             alt="The Barbican"
